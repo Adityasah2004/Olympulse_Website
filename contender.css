@@ -1,4 +1,10 @@
+.page{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+}
+
 .sidebar-container {
+ 
   width: 100%;
   max-width: 262px;
   height: 100vh;
