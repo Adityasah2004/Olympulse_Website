@@ -1,88 +1,119 @@
-.sidebar-container{
-    width: 262px;
-height: 1024px;
-flex-shrink: 0;
-background: linear-gradient(0deg, #006B84 0%, #45DCFF 45.31%, #BDF2FF 79.17%);
+.sidebar-container {
+  width: 100%;
+  max-width: 262px;
+  height: 100vh;
+  flex-shrink: 0;
+  background: linear-gradient(0deg, #006B84 0%, #45DCFF 45.31%, #BDF2FF 79.17%);
 }
 
-.circle{
-    width: 100px;
-height: 100px;
-flex-shrink: 0;
-border-radius: 100px;
-background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+.circle {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
-.sidebar{
-    display: flex;
-width: 222px;
-height: 460px;
-flex-direction: column;
-align-items: flex-start;
-gap: 15px;
-flex-shrink: 0;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  flex-shrink: 0;
+  padding: 20px;
 }
 
 .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 .sidebar ul li {
-    display: flex;
-padding: 24px 78px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-flex: 1 0 0;
-align-self: stretch;
-border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 12px 26px;
 }
 
-.sidebar ul li a{
-    color: #111827;
-text-align: center;
-font-family: Rubik;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 32px;
-letter-spacing: -0.48px;
+.sidebar ul li a {
+  color: #111827;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.48px;
 }
 
-.photo{
-    width: 263px;
-height: 441px;
-flex-shrink: 0;
-
+.photo {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
-.Sign_Out_Button{
-    display: inline-flex;
-padding: 14px 53px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-border-radius: 24px;
-background: #23D5FF;
-box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+.Sign_Out_Button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 24px;
+  background: #23D5FF;
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 30px;
 }
 
 .profile {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+}
+
+.profile h2 {
+  margin-top: 5px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    max-width: none;
+    height: auto;
   }
-  
-  .profile img {
-    width: 100px;
-    height: 100px;
+
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  
-  .profile h2 {
-    margin-top: 5px;
+
+  .sidebar ul li {
+    flex: 0 0 calc(50% - 16px);
   }
-  
+}
+
+@media (max-width: 480px) {
+  .sidebar ul li {
+    flex: 0 0 100%;
+  }
+
+  .photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .Sign_Out_Button {
+    width: 100%;
+  }
+}
