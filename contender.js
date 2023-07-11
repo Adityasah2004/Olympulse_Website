@@ -1,4 +1,4 @@
-// Sample data
+// test
 const profileData = [
     {
       name: "John Doe",
@@ -23,16 +23,16 @@ const profileData = [
     }
   ];
   
-  // Create profiles and append to the container
+  // container
   const profilesContainer = document.getElementById("profiles-container");
   
   profileData.forEach(profile => {
     const { name, country, image } = profile;
   
-    // Find the corresponding URL for the profile
+    // redirect
     const profileUrl = urlData.find(data => data.name === name).url;
   
-    // Create the profile element
+    // profile element
     const profileElement = document.createElement("div");
     profileElement.className = "profile";
     profileElement.innerHTML = `
@@ -41,12 +41,12 @@ const profileData = [
       <p>${country}</p>
     `;
   
-    // Handle click event to redirect to the URL
+    // click event
     profileElement.addEventListener("click", () => {
       window.location.href = profileUrl;
     });
   
-    // Append the profile element to the container
+    // container
     profilesContainer.appendChild(profileElement);
   });
   
