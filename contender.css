@@ -78,6 +78,33 @@ body {
   padding: 10px 30px;
 }
 
+.search-button {
+  display: inline-block;
+  border:#090909;
+  border-width: 0.5px;
+  background-color: #fffefe;
+  padding: 10px 20px;
+  border-radius: 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.search-icon {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.search-bar {
+  text-align: center;
+  margin: 20px auto 0;
+  
+}
+.content{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: auto;
+grid-gap: 20px;
+}
+
 .profile {
   display: inline-block;
   margin: 10px;
