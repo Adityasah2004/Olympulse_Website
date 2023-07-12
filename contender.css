@@ -20,7 +20,7 @@ body {
   z-index: 1;
 }
 
-.circle {
+.circle { 
   width: 100px;
   height: 100px;
   flex-shrink: 0;
