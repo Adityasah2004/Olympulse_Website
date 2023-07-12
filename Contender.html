@@ -5,33 +5,54 @@
   <link rel="stylesheet" type="text/css" href="contender.css">
 </head>
 <body>
-<div class="page">
-   <div class="sidebar-container">
-    <div class="circle">
+  <div class="container">
+    <div class="sidebar-container">
+      <div class="circle">
         <img src="assets/Ellipse 1.png" alt="Profile Image">
-    </div>
-    <div class="sidebar">
+      </div>
+      <div class="sidebar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Your Itinerary</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Headlines</a></li>
-            <li><a href="#">Contender</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Your Itinerary</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Headlines</a></li>
+          <li><a href="#">Contender</a></li>
         </ul>
-    </div>
-    <div class="photo">
+      </div>
+      <div class="photo">
         <img src="assets/image 7.png" alt="Image">
+        <button id="Sign_Out_Button">Sign out</button>
+      </div>
     </div>
-    <button id="Sign_Out_Button">Sign out</button>
-  </div>
-  <div class="search-bar">
-    <input type="text" id="search-input" placeholder="Search">
-  </div>
-  
-  <div class="content">
-  <div id="profiles-container"></div>
-  <script src="contender.js"></script>
-  </div>
+    <div class="content">
+      <div class="page2">
+        <div class="rect1">
+          <div class="cylinder">
+            <div class="bar1">
+              <svg width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="search-refraction">
+                  <path id="Icon" d="M21 26.75L16.65 21.3125M11 8C13.7614 8 16 10.7982 16 14.25M19 14.25C19 19.7728 15.4183 24.25 11 24.25C6.58172 24.25 3 19.7728 3 14.25C3 8.72715 6.58172 4.25 11 4.25C15.4183 4.25 19 8.72715 19 14.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </div>
+            <div class="bar2">
+              <input type="text" id="searchInput" placeholder="Search..." />
+            </div>
+          </div>
+        </div>        
+        <div class="frame1">
+          <div class="pic1">
+            <img src="Ellipse 1.png" alt="Profile">
+          </div>
+          <p class="name">
+            Someone
+          </p>
+          <p class="nation">
+            country
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
