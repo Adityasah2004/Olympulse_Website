@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  width: 262px;
+  height: 1024px;
+  flex-shrink: 0;
+  background: linear-gradient(0deg, #006B84 0%, #45DCFF 45.31%, #BDF2FF 79.17%);
+  position: sticky;
+  top: 0;
+  overflow-y: fixed;
+  z-index: 1;
+}
+
+.profile img {
+  height: 100px;
+flex-shrink: 0;
+  border-radius: 100px;
+padding-top: 20px;
+padding-left: 20px;
+}
+
+.sidebar-menu {
+  display: flex;
+  width: 222px;
+  height: 460px;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+  gap : 15px;
+  margin-top: 20px;
+  padding-left:20px ;
+  padding-right: 20px;
+  padding-top: 44px;
+  flex-shrink: 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+padding: 24px 78px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex: 1 0 0;
+align-self: stretch;
+border-radius: 100px;
+background: rgba(255, 255, 255, 0.31);
+backdrop-filter: blur(20px);
+  
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #111827;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.48px;
+  
+}
+
+.fixed-image {
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.fixed-image img {
+  width: 150px;
+  height: auto;
+}
+
+.fixed-image button.sign-out {
+  background-color: #FF0000; /* Button background color */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
