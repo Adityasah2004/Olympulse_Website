@@ -69,19 +69,19 @@ backdrop-filter: blur(20px);
 .fixed-image {
   position: fixed;
   bottom: 0;
-  padding: 20px;
   text-align: center;
+  z-index: 0;
 }
 
 .fixed-image img {
-  width: 150px;
-  height: auto;
+  position: relative;
+  z-index: -1;
 }
 
-.fixed-image button.sign-out {
-  background-color: #FF0000; /* Button background color */
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
+.fixed-image button#sign-out {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
