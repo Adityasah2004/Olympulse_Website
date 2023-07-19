@@ -5,12 +5,12 @@ body {
 }
 
 .container {
-  display: flex; /* Add flex display to the container */
+  display: flex;
 }
 
 .sidebar-container {
   width: 262px;
-  height: 100vh; 
+  height: 100vh;
   flex-shrink: 0;
   background: linear-gradient(0deg, #006B84 0%, #45DCFF 45.31%, #BDF2FF 79.17%);
   position: sticky;
@@ -63,7 +63,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
-  /* 133.333% */
   letter-spacing: -0.48px;
 }
 
@@ -86,18 +85,18 @@ body {
   width: 200px;
   height: 60px;
   color: #000;
-text-align: center;
-font-family: Rubik;
-font-size: 24px;
-font-style: normal;
-font-weight: 600;
-line-height: 32px; /* 133.333% */
-letter-spacing: -0.48px;
-justify-content: center;
-align-items: center;
-border-radius: 24px;
-background: #23D5FF;
-box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: #23D5FF;
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -105,60 +104,86 @@ box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
 }
 
 .scroll {
-  flex-grow: 1; /* Add flex-grow to the scroll section */
-  height: 100vh; /* Adjust the height to use the full viewport height */
-  overflow-y: scroll; /* Enable scrolling for the scroll section */
+  flex-grow: 1;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .heading {
   width: 803px;
   color: #111827;
   margin-left: 21px;
-
-/* Display/Large/Bold */
-font-family: Rubik;
-font-size: 64px;
-font-style: normal;
-font-weight: 700;
-line-height: 68px; /* 106.25% */
-letter-spacing: -1.28px;
+  font-family: Rubik;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 68px;
+  letter-spacing: -1.28px;
 }
 
 .subheading {
   display: flex;
-width: 514px;
-height: 102px;
-flex-direction: column;
-justify-content: center;
-flex-shrink: 0;
-color: #9A9A9A;
-margin-left: 21px;
-
-/* Heading/Web/H5/Regular */
-font-family: Rubik;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 32px; /* 133.333% */
-letter-spacing: -0.48px;
+  width: 514px;
+  height: 102px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #9A9A9A;
+  margin-left: 21px;
+  font-family: Rubik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.48px;
 }
 
 .carousel-container {
-  display: flex;
   width: 1080px;
   height: 500px;
-  justify-content: flex-end;
-  align-items: center;
-  flex-shrink: 0;
+  margin: 0 auto;
   border-radius: 12px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+  border-radius: 12px;
+}
+
+.carousel .slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
 .carousel-image {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 0 10px;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: fill;
+}
+
+.carousel .slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel .slide-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel .slide-indicators .indicator.active {
+  background-color: #333;
 }
 
 /* Media Query for screens with a maximum width of 768px */
@@ -188,5 +213,51 @@ letter-spacing: -0.48px;
 
   .profile img {
     display: none;
+  }
+}
+
+/* Media Query for screens with a maximum width of 320px (phone screen size) */
+@media screen and (max-width: 320px) {
+  .heading {
+    width: auto;
+    margin-left: 10px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .subheading {
+    width: auto;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+
+
+/* Media Query for screens with a maximum width of 480px (small width displays) */
+@media screen and (max-width: 480px) {
+  .heading {
+    width: auto;
+    margin-left: 10px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .subheading {
+    width: auto;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 300px;
   }
 }
