@@ -6,7 +6,7 @@ body {
 
 .sidebar-container {
   width: 262px;
-  height: 1024px;
+  height: 100vh; /* Adjusted to use viewport height */
   flex-shrink: 0;
   background: linear-gradient(0deg, #006B84 0%, #45DCFF 45.31%, #BDF2FF 79.17%);
   position: sticky;
@@ -17,23 +17,21 @@ body {
 
 .profile img {
   height: 100px;
-flex-shrink: 0;
+  flex-shrink: 0;
   border-radius: 100px;
-padding-top: 20px;
-padding-left: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .sidebar-menu {
   display: flex;
-  width: 222px;
-  height: 460px;
   flex-direction: column;
   align-items: flex-start;
   list-style-type: none;
   padding: 0;
-  gap : 15px;
+  gap: 15px;
   margin-top: 20px;
-  padding-left:20px ;
+  padding-left: 20px;
   padding-right: 20px;
   padding-top: 44px;
   flex-shrink: 0;
@@ -41,16 +39,15 @@ padding-left: 20px;
 
 .sidebar-menu li {
   display: flex;
-padding: 24px 78px;
-justify-content: center;
-align-items: center;
-gap: 8px;
-flex: 1 0 0;
-align-self: stretch;
-border-radius: 100px;
-background: rgba(255, 255, 255, 0.31);
-backdrop-filter: blur(20px);
-  
+  padding: 24px 78px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.31);
+  backdrop-filter: blur(20px);
 }
 
 .sidebar-menu a {
@@ -61,9 +58,9 @@ backdrop-filter: blur(20px);
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 133.333% */
+  line-height: 32px;
+  /* 133.333% */
   letter-spacing: -0.48px;
-  
 }
 
 .fixed-image {
@@ -84,4 +81,34 @@ backdrop-filter: blur(20px);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+/* Media Query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    height: auto;
+    position: static;
+    overflow-y: visible;
+  }
+
+  .sidebar-menu {
+    padding: 0;
+    margin-top: 0;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  .sidebar-menu li {
+    padding: 10px 20px;
+  }
+
+  .profile img {
+    display: none;
+  }
 }
