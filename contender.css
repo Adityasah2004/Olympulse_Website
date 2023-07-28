@@ -110,16 +110,15 @@ body {
 }
 
 .container2 {
-  position: relative;
-  background: linear-gradient(135deg, rgb(179, 208, 253) 0%, rgb(164, 202, 248) 100%);
+  width:400px;
   border-radius: 1000px;
   padding: 6px;
-  display: grid;
-  place-content: center;
-  z-index: 0;
-  max-width: 600px;
-  m
+ display:flex;
+ justify-content: center;
+
   margin-top: 48px;
+  
+  
 }
 
 .search-container {
@@ -188,5 +187,35 @@ body {
 .search__icon path {
   fill: white;
 }
+
+.contender-profiles{
+  display:grid;
+  grid-template-columns: 6;
+  grid-template-rows: 6;
+  padding:auto;
+  text-align: center;
+  margin:auto;
+}
+
+.profiles{
+  
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profiles img{
+object-fit: cover;
+width: 100%;
+height:100%;
+
+}
+
+.written h3{
+  margin-top: 10px;
+  font-size: 24px;
+
+}
+
 
 
