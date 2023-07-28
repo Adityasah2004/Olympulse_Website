@@ -1,58 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="contender.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenders</title>
+  <link rel="stylesheet" href="contender.css">
 </head>
 <body>
+  
+
   <div class="container">
     <div class="sidebar-container">
-      <div class="circle">
+      <div class="profile">
         <img src="assets/Ellipse 1.png" alt="Profile Image">
       </div>
-      <div class="sidebar">
-        <ul>
+        <ul class="sidebar-menu">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Your Itinerary</a></li>
+          <li><a href="#">Planner</a></li>
           <li><a href="#">Analytics</a></li>
           <li><a href="#">Headlines</a></li>
           <li><a href="#">Contender</a></li>
         </ul>
-      </div>
-      <div class="photo">
+      <div class="fixed-image">
         <img src="assets/image 7.png" alt="Image">
-        <button id="Sign_Out_Button">Sign out</button>
+        <button id="sign-out">Sign out</button>
       </div>
     </div>
-    <div class="content">
-      <div class="page2">
-        <div class="rect1">
-          <div class="cylinder">
-            <div class="bar1">
-              <svg width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="search-refraction">
-                  <path id="Icon" d="M21 26.75L16.65 21.3125M11 8C13.7614 8 16 10.7982 16 14.25M19 14.25C19 19.7728 15.4183 24.25 11 24.25C6.58172 24.25 3 19.7728 3 14.25C3 8.72715 6.58172 4.25 11 4.25C15.4183 4.25 19 8.72715 19 14.25Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-              </svg>
-            </div>
-            <div class="bar2">
-              <input type="text" id="searchInput" placeholder="Search..." />
-            </div>
-          </div>
-        </div>        
-        <div class="frame1">
-          <div class="pic1">
-            <img src="Ellipse 1.png" alt="Profile">
-          </div>
-          <p class="name">
-            Someone
-          </p>
-          <p class="nation">
-            country
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+
+    <div class="scroll">
+
+      <div class="search">
+        <form class="form">
+          <label for="search">
+              <input required="" autocomplete="off" placeholder="search here....." id="search" type="text">
+              <div class="icon">
+                
+                  <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="swap-on">
+                      <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round" stroke-linecap="round"></path>
+                  </svg>
+                  <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="swap-off">
+                      <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linejoin="round" stroke-linecap="round"></path>
+                  </svg>
+              </div>
+              <button type="reset" class="close-btn">
+                  <svg viewBox="0 0 20 20" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
+                      <path clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+                  </svg>
+              </button>
+          </label>
+      </form>
+        </div></div></div>
+
+
+
+
+
 </body>
 </html>
