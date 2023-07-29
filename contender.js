@@ -1,12 +1,37 @@
-import React, {useState} from './frontend/'
-import PlayerFilter from './frontend/PlayerFilter';
-import PlayerGrid from './frontend/PlayerGrid';
-import App from './frontend/app';
+type Country = {
+    abbr: string;
+    icon: string;
+    name: string;
+    suggested?: boolean;
+  };
 
-
-
-
-
-const { createClient } = require('@supabase/supabase-js');
-
-const supabase = createClient('https://qcmzcfublrqyfgdiforw.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjbXpjZnVibHJxeWZnZGlmb3J3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTAyMjA4NjUsImV4cCI6MjAwNTc5Njg2NX0.wTZbmgx2Z9_UZLnlUYy0kMyn2nnetIe4G06LPl5HX10');
+const allcountries = [
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    
+  ];
+  
+  const input = document.getElementById("countryInput");
+  const countryList = document.getElementById("countryList");
+  
+  input.addEventListener("input", function() {
+    const inputValue = input.value.trim().toLowerCase();
+    const filteredCountries = countries.filter(country =>
+      country.toLowerCase().startsWith(inputValue)
+    );
+  
+    countryList.innerHTML = "";
+    filteredCountries.forEach(country => {
+      const listItem = document.createElement("li");
+      listItem.textContent = country;
+      countryList.appendChild(listItem);
+    });
+  });
+  
+  countryList.addEventListener("click", function(event) {
+    if (event.target.tagName === "LI") {
+      input.value = event.target.textContent;
+      countryList.innerHTML = "";
+    }
+  });
