@@ -115,7 +115,7 @@ body {
   padding: 6px;
  display:flex;
  justify-content: center;
-
+ margin: 0 500px;
   margin-top: 48px;
   
   
@@ -159,7 +159,7 @@ body {
   width: 100%;
   background: linear-gradient(135deg, rgb(218, 232, 247) 0%, rgb(214, 229, 247) 100%);
   border: none;
-  color: #9EBCD9;
+  color: #000000;
   font-size: 20px;
   border-radius: 50px;
 }
@@ -194,7 +194,8 @@ body {
   grid-template-rows: 6;
   padding:auto;
   text-align: center;
-  margin:auto;
+  margin-left:22px;
+  margin-right: 22px;
 }
 
 .profiles{
