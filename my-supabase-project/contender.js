@@ -1,5 +1,3 @@
-
-
 const countries = [
     { name: 'Afghanistan', abbr: 'AF', icon: '🇦🇫' },
     { name: 'Aland Islands', abbr: 'AX', icon: '🇦🇽' },

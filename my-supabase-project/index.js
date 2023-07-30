@@ -1,1 +1,1 @@
-import './demo.js';
+import './contender2.js';
